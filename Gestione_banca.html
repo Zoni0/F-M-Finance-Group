@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Banca</title>
+    <link rel="stylesheet" href="Gestione_banca.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">F&M FINANCE GROUP</div>
+            <ul class="nav-links" id="auth-links">
+                <li><a href="Gestione_banca.html">Home</a></li>
+                <li><a href="Movimenti.html">Movimenti</a></li>
+                <li><a href="Personale.html">Personale</a></li>
+                
+                <li id="utente-info">
+                    <span id="welcome-message"></span>
+                    <button class="btn-primary" id="logout-button" style="display:none;" onclick="logout()">Logout</button>
+                </li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="registrazione.html" id="register-link"><button class="btn-primary">Registrati</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="photo">
+                <img src="../loghiMF/Logo_M_F__2_-removebg-preview.png" alt="foto logo" height="250px" width="auto">
+            </div>
+            <p>Monitora i movimenti, gestisci il personale e ottieni un resoconto chiaro e dettagliato.</p>
+            <button class="btn-primary">
+                <a href="#extra-content" style="color: white; text-decoration: none;">Scopri di più</a>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sezione aggiuntiva per allungare la pagina -->
+    <section class="scroll-area" id="extra-content">
+        <div class="info">
+            <div class="text">
+                <h2>Scopri di più su F&M Finance Group</h2>
+                <p>F&M Finance Group è un punto di riferimento nella gestione finanziaria aziendale, offrendo soluzioni su misura per imprese di ogni settore. Grazie a un team di esperti qualificati e a un approccio innovativo, fornisce consulenze strategiche per ottimizzare la stabilità economica delle aziende.</p>
+                <p>I servizi spaziano dalla pianificazione finanziaria fino alla consulenza per investimenti. Utilizzano strumenti tecnologici avanzati per monitorare le performance finanziarie in tempo reale. L'approccio trasparente e orientato ai risultati, unito al rispetto delle normative, rende F&M Finance Group un partner strategico per le imprese che desiderano crescere in modo sostenibile.</p>
+            </div>
+            <div class="image-container">
+                <img src="../loghiMF/M&F merch.png" alt="Merchandising F&M" class="large-image">
+            </div>
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    <footer>
+       <p>&copy; 2025 - F&M Finance Group</p>
+   </footer>
+     
+    <script src="Gestione_banca.js"></script>
+    <script src="Movimenti.js"></script>
+    <script src="Personale.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

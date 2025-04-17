@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione</title>
+    <link rel="stylesheet" href="registrazione.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>REGISTRAZIONE</h2>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="User name">
+        </div>
+        <div class="input-group">
+            <input type="text" id="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div class="input-group">
+            <input type="password" id="confirm-password" placeholder="Conferma password">
+        </div>
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Nome completo">
+        </div>
+        <div id="message" style="color: red;"></div>
+        <button class="login-button" onclick="register()">REGISTRATI</button>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

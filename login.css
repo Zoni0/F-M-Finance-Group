@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1c1c1c; /* Nero leggermente più chiaro per eleganza */
+}
+
+.login-container {
+  background: #2e2e2e; /* Grigio scuro per il riquadro */
+  padding: 60px;
+  width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff; /* Testo più luminoso */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 18px 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: #404040; /* Grigio più chiaro per contrasto */
+  border: 1px solid #5a5a5a;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  background: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding-left: 12px;
+}
+
+.input-group input::placeholder {
+  color: #bdbdbd; /* Placeholder più visibile */
+}
+
+.input-group:focus-within {
+  border-color: #ffffff; /* Effetto interazione moderno */
+}
+
+.login-button {
+  background: linear-gradient(135deg, #6b6b6b, #909090); /* Effetto sfumato per modernità */
+  color: white;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, #777777, #aaaaaa);
+  transform: scale(1.03);
+}
+
+/* Effetto di animazione iniziale */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.login-container {
+  animation: fadeIn 0.6s ease-in-out;
+}

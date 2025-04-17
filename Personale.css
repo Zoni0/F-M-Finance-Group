@@ -1,0 +1,182 @@
+* {
+    scroll-behavior: smooth; /* Abilita lo scorrimento liscio per tutte le ancore */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 200%;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Allinea gli elementi verticalmente */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 150px; /* Distanza tra logo e menu */
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center; /* Assicura l'allineamento verticale */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b3b3b3;
+}
+
+.btn-primary {
+    background: #444;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(100, 100, 100, 0.4);
+}
+
+.hero {
+    background: #333;
+    padding: 60px 20px; /* Ridotto padding verticale */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh; /* Ridotto da 50vh a 35vh */
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.scroll-area {
+    height: 100vh; /* Aggiunge una sezione alta quanto l'intero schermo */
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title-container {
+    text-align: center;
+    margin: 20px auto;  /* Aggiunto margine per centrare meglio */
+    width: 40%; /* Imposta una larghezza per evitare che si allarghi troppo */
+}
+
+.info {
+    display: block; /* Imposta il contenitore come blocco per controllarne la larghezza */
+    border: none;
+    padding: 20px;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin-right: 15px; /* Centra orizzontalmente */
+    width: 60%; /* Imposta una larghezza del contenitore */
+}
+
+.personale-table {
+    width: 100%; /* Occupa tutto lo spazio disponibile nel contenitore */
+    border-collapse: separate; /* Cambiato per arrotondare gli angoli */
+    border-spacing: 0; /* Rimuove lo spazio tra le celle */
+    font-family: 'Roboto', sans-serif; /* Font moderno */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aggiunta ombreggiatura */
+    border-radius: 12px; /* Angoli arrotondati */
+    overflow: hidden; /* Per assicurarsi che il contenuto rispetti i bordi */
+}
+
+.personale-table th, .personale-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+        
+}
+
+.personale-table th {
+    background-color: #444;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase; /* Lettere maiuscole */
+    border-bottom: 2px solid #333; /* Spessore extra per la separazione */
+}
+
+.personale-table td {
+    font-size: 16px;
+    color: #555;
+}
+
+.personale-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alterna colori per le righe */
+}
+
+.personale-table tr:hover {
+    background-color: #efefef; /* Evidenzia la riga al passaggio del mouse */
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

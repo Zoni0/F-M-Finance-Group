@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimenti Aziendali</title>
+    <link rel="stylesheet" href="Movimenti.css">
+    <!-- Aggiunta di Chart.js per i grafici -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">F&M FINANCE GROUP</div>
+            <ul class="nav-links">
+                <li><a href="Gestione_banca.html">Home</a></li>
+                <li><a href="Movimenti.html">Movimenti</a></li>
+                <li><a href="Personale.html">Personale</a></li>
+                
+                <li><button class="btn-primary" id="logout-button" style="display:none;">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Movimenti Aziendali</h1>
+            <p>Visualizza tutte le entrate e le uscite dell'azienda.</p>
+        </div>
+    </section>
+
+    <section class="scroll-area" id="extra-content">
+        <div class="form-container">
+            <h2>Aggiungi Movimento</h2>
+            <form id="movement-form">
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required autocomplete="off">
+                <label for="description">Descrizione:</label>
+                <input type="text" id="description" name="description" required>
+                <label for="type">Tipo:</label>
+                <select id="type" name="type" required autocomplete="off">
+                    <option value="Entrata">Entrata</option>
+                    <option value="Uscita">Uscita</option>
+                </select>
+                <label for="amount">Importo:</label>
+                <input type="text" id="amount" name="amount" required autocomplete="off">
+                <button type="submit" class="btn-primary">Aggiungi</button>
+            </form>
+        </div>
+
+        <div class="info">
+            <div class="movements-table-container">
+                <table class="movements-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Descrizione</th>
+                            <th>Tipo</th>
+                            <th>Importo</th>
+                            <th>Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movements-body">
+                        <!-- I movimenti verranno aggiunti dinamicamente qui -->
+                    </tbody>
+                </table>
+            </div>
+    </section>
+
+       
+<!-- Bottone per scaricare il CSV -->
+<div class="export-button">
+    <button class="btn-primary" onclick="exportMovementsToCSV()">Scarica Movimenti in CSV</button>
+</div>
+
+  
+    
+
+    <!-- Sezione per il grafico -->
+    <section class="graph-section">
+        <h2>Grafico Entrate/Uscite</h2>
+        <canvas id="graficoEntrateUscite"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - F&M Finance Group</p>
+    </footer>
+
+    <script src="auth_state.js"></script>
+    <script src="movimenti.js"></script>
+
+</body>
+</html>

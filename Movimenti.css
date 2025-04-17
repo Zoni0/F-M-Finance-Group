@@ -1,0 +1,274 @@
+/* Stili generali */
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Header e Navbar */
+header {
+  background-color: #222;
+  color: white;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #b3b3b3;
+}
+
+.btn-primary {
+  background: #444;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(100, 100, 100, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: #333;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 25vh;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Form di inserimento modernizzato */
+.form-container {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px; /* Larghezza massima */
+  min-width: 500px; /* Larghezza minima aggiunta */
+  margin: 20px;
+  text-align: center;
+}
+
+
+.form-container h2 {
+  color: #222;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  text-align: left;
+}
+
+.form-container input, .form-container select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.form-container input:focus, .form-container select:focus {
+  border-color: #444;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(68, 68, 68, 0.5);
+}
+
+.form-container .btn-primary {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 18px;
+}
+
+/* Sezione Scroll Area con layout Flexbox */
+.scroll-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+/* Tabella Movimenti */
+.info {
+  display: block;
+  box-shadow: none;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 20px;
+  width: 60%;
+}
+
+
+
+
+.movements-table {
+  width: 100%;
+  border-collapse: separate; /* Cambiato per arrotondare gli angoli */
+  border-spacing: 0; /* Rimuove lo spazio tra le celle */
+  font-family: 'Roboto', sans-serif; /* Font moderno */
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aggiunta ombreggiatura */
+  border-radius: 12px; /* Angoli arrotondati */
+  overflow: hidden; /* Per assicurarsi che il contenuto rispetti i bordi */
+  max-height: 300px; /* Altezza massima della tabella */
+    overflow-y: auto; /* Abilita lo scorrimento verticale */
+  
+}
+
+.movements-table th, .movements-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+.movements-table-container {
+  max-height: 500px; /* Altezza massima della tabella */
+  overflow-y: auto; /* Abilita lo scorrimento verticale */
+ 
+}
+
+.movements-table th {
+  position: sticky; /* L'intestazione rimane visibile durante lo scorrimento */
+  top: 0;
+  z-index: 1;
+  background-color: #444;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase; /* Lettere maiuscole */
+  border-bottom: 2px solid #333; /* Spessore extra per la separazione */
+}
+
+.movements-table td {
+  font-size: 16px;
+  color: #555;
+}
+
+.movements-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alterna colori per le righe */
+}
+
+.movements-table tr:hover {
+  background-color: #efefef; /* Evidenzia la riga al passaggio del mouse */
+  transition: background-color 0.3s ease;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.graph-section canvas {
+  width: 95%;
+  max-height: 95%;
+  align-content: left;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Posizionamento della scritta di benvenuto e del pulsante logout */
+#utente-info {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Spazio tra la scritta e il pulsante */
+  margin-left: auto; /* Sposta il contenitore a destra */
+}
+
+#utente-info #welcome-message {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+#logout-button {
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+  background-color: #555;
+}
+
+.export-button{
+  display: flex;
+  justify-content: center; /* Centra il bottone orizzontalmente */
+  margin: 20px 0; /* Aggiunge spazio sopra e sotto */
+
+}
