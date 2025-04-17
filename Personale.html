@@ -14,7 +14,7 @@
                 <li><a href="Gestione_banca.html">Home</a></li>
                 <li><a href="Movimenti.html">Movimenti</a></li>
                 <li><a href="#">Personale</a></li>
-                
+               
             </ul>
         </nav>
     </header>
@@ -26,52 +26,34 @@
         </div>
     </section>
 
-    <section class="scroll-area" id="extra-content">
-        <div class="title-container">
-            <h2>Lista del Personale</h2>
-        </div>
+    <!-- Form per aggiungere personale -->
+    <section class="scroll-area">
+    <section class="add-personale">
+        <h2>Aggiungi Dipendente</h2>
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="ruolo" placeholder="Ruolo">
+        <input type="number" id="paga" placeholder="Salario mensile">
+        <input type="number" id="ore" placeholder="Ore di lavoro (settimanali)">
+        <button onclick="aggiungiDipendente()">Aggiungi</button>
+        <p id="error-message" style="color: red;"></p>
+    </section>
 
-        <div class="info">
+   
+        
+
+        <div class="personale-table-container">
             <table class="personale-table">
                 <thead>
                     <tr>
                         <th>Nome</th>
+                        <th>Cognome</th>
                         <th>Ruolo</th>
-                        <th>Paga</th>
-                        <th>Ore di Lavoro</th>
+                        <th>Stipendio</th>
+                        <th>Azioni</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Mario Rossi</td>
-                        <td>Manager</td>
-                        <td>€ 3,500.00</td>
-                        <td>40 ore/settimana</td>
-                    </tr>
-                    <tr>
-                        <td>Luigi Bianchi</td>
-                        <td>Contabile</td>
-                        <td>€ 2,500.00</td>
-                        <td>35 ore/settimana</td>
-                    </tr>
-                    <tr>
-                        <td>Giulia Verdi</td>
-                        <td>Segretaria</td>
-                        <td>€ 1,800.00</td>
-                        <td>30 ore/settimana</td>
-                    </tr>
-                    <tr>
-                        <td>Francesco Neri</td>
-                        <td>IT Specialist</td>
-                        <td>€ 2,800.00</td>
-                        <td>40 ore/settimana</td>
-                    </tr>
-                    <tr>
-                        <td>Anna Gialli</td>
-                        <td>Marketing</td>
-                        <td>€ 2,200.00</td>
-                        <td>35 ore/settimana</td>
-                    </tr>
+                <tbody id="personale-body">
+                    <!-- I dati del personale verranno aggiunti dinamicamente qui -->
                 </tbody>
             </table>
         </div>
@@ -82,6 +64,5 @@
     </footer>
 
     <script src="personale.js"></script>
-    <script src="auth_state.js"></script>
 </body>
 </html>
