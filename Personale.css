@@ -1,62 +1,66 @@
+/* Reset e base */
 * {
-    scroll-behavior: smooth; /* Abilita lo scorrimento liscio per tutte le ancore */
+    
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
+  }
+  html, body {
+    height: 100vh;            /* Altezza pari a tutto lo schermo */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;  /* opzionale, migliora l’aspetto */
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    height: 200%;
-}
-
-header {
+  }
+  
+  /* Header */
+  header {
     background-color: #222;
     color: white;
     padding: 15px 15px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Allinea gli elementi verticalmente */
-}
-
-nav {
+    align-items: center;
+  }
+  
+  nav {
     display: flex;
     align-items: center;
-    gap: 150px; /* Distanza tra logo e menu */
-}
-
-.logo {
+    gap: 150px;
+  }
+  
+  .logo {
     font-size: 26px;
     font-weight: bold;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
-    align-items: center; /* Assicura l'allineamento verticale */
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
+    align-items: center;
+  }
+  
+  .nav-links a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     transition: color 0.3s;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: #b3b3b3;
-}
-
-.btn-primary {
+  }
+  
+  /* Bottone */
+  .btn-primary, button {
     background: #444;
     border: none;
     padding: 12px 25px;
@@ -66,117 +70,154 @@ nav {
     color: white;
     font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-primary:hover {
+  }
+  
+  .btn-primary:hover, button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(100, 100, 100, 0.4);
-}
-
-.hero {
+  }
+  
+  /* Hero */
+  .hero {
     background: #333;
-    padding: 60px 20px; /* Ridotto padding verticale */
+    padding: 60px 20px;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 25vh; /* Ridotto da 50vh a 35vh */
-}
-
-.hero-content {
-    text-align: center;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-content h1 {
+    min-height: 25vh;
+  }
+  
+  .hero-content h1 {
     font-size: 42px;
     margin-bottom: 15px;
-}
-
-.hero-content p {
+  }
+  
+  .hero-content p {
     font-size: 20px;
     margin-bottom: 30px;
-}
-
-.scroll-area {
-    height: 100vh; /* Aggiunge una sezione alta quanto l'intero schermo */
-    background-color: #ddd;
+  }
+  
+  /* Area con form + tabella affiancati */
+  .scroll-area {
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-.title-container {
-    text-align: center;
-    margin: 20px auto;  /* Aggiunto margine per centrare meglio */
-    width: 40%; /* Imposta una larghezza per evitare che si allarghi troppo */
-}
-
-.info {
-    display: block; /* Imposta il contenitore come blocco per controllarne la larghezza */
-    border: none;
-    padding: 20px;
-    background-color: transparent;
-    box-sizing: border-box;
-    margin-right: 15px; /* Centra orizzontalmente */
-    width: 60%; /* Imposta una larghezza del contenitore */
-}
-
-.personale-table {
-    width: 100%; /* Occupa tutto lo spazio disponibile nel contenitore */
-    border-collapse: separate; /* Cambiato per arrotondare gli angoli */
-    border-spacing: 0; /* Rimuove lo spazio tra le celle */
-    font-family: 'Roboto', sans-serif; /* Font moderno */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 60px;
+    gap: 40px;
+    background-color: #ddd;
+  }
+  
+  /* Blocchi principali affiancati */
+  .add-personale {
+    flex: 1;
+    max-width: 400px;
     background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aggiunta ombreggiatura */
-    border-radius: 12px; /* Angoli arrotondati */
-    overflow: hidden; /* Per assicurarsi che il contenuto rispetti i bordi */
-}
-
-.personale-table th, .personale-table td {
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-personale h2 {
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .add-personale input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  .add-personale input:focus {
+    border-color: #444;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(68, 68, 68, 0.5);
+  }
+  
+  .add-personale button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    font-size: 18px;
+  }
+  
+  /* TABELLA - Blocchi coerenti */
+  .personale-table-container {
+    flex: 2;
+    max-width: calc(100% - 440px); /* sottrai larghezza form + gap */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  .personale-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .personale-table th,
+  .personale-table td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-        
-}
-
-.personale-table th {
+  }
+  
+  .personale-table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     background-color: #444;
     color: white;
     font-size: 16px;
-    text-transform: uppercase; /* Lettere maiuscole */
-    border-bottom: 2px solid #333; /* Spessore extra per la separazione */
-}
-
-.personale-table td {
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+  }
+  
+  .personale-table td {
     font-size: 16px;
     color: #555;
-}
-
-.personale-table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alterna colori per le righe */
-}
-
-.personale-table tr:hover {
-    background-color: #efefef; /* Evidenzia la riga al passaggio del mouse */
+  }
+  
+  .personale-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .personale-table tr:hover {
+    background-color: #efefef;
     transition: background-color 0.3s ease;
-}
-
-footer {
-    background-color: #222;
-    color: white;
-    padding: 20px 50px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
     text-align: center;
-}
-
-footer p {
+    margin-top: auto; /* Questa è la chiave */
+  }
+  
+  footer p {
     margin: 0;
-}
+  }
+  
